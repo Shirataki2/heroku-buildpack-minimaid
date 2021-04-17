@@ -16,14 +16,6 @@ export BUILD_DIR CACHE_DIR ENV_DIR
 mkdir -p "$CACHE_DIR"
 cd "$CACHE_DIR" || exit 1
 
-echo "-----> Install Dependencies"
-apt-get update && apt-get install -y \\
-    build-essential \\
-    cmake \\
-    git \\
-    libasound-dev \\
-    opus-tools
-
 echo "-----> Build JTalkDll"
 git clone https://github.com/sizumita/jtalkdll.git
 cd jtalkdll || exit 1
