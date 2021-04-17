@@ -17,7 +17,7 @@ mkdir -p "$CACHE_DIR"
 cd "$CACHE_DIR" || exit 1
 
 echo "-----> Build JTalkDll"
-git clone https://github.com/sizumita/jtalkdll.git
+git clone https://github.com/shirataki2/jtalkdll.git
 cd jtalkdll || exit 1
 bash build
 
