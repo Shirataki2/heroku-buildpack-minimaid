@@ -19,7 +19,7 @@ cd "$CACHE_DIR" || exit 1
 echo "-----> Build JTalkDll to $BUILD_DIR"
 git clone https://github.com/shirataki2/jtalkdll.git
 cd jtalkdll || exit 1
-bash build
+HOME="${BUILD_DIR}" bash build
 
 cp -r /usr/local/lib/libjtalk.so "$BUILD_DIR/.heroku/minimaid/lib"
 cp -r /usr/local/include/jtalk.h "$BUILD_DIR/.heroku/minimaid/include"
